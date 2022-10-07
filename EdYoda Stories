@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> EdYoda Stories</title>
+    <link rel="icon" type="image/x-icon"
+        href="https://edyoda.s3.amazonaws.com/media/profile-picture/profile_pic_edyoda_K4WMt5G.jpg">
+
+    <style>
+        body {
+            background-color: #F2F6FF;
+            margin: 0;
+        }
+
+        #header {
+            background-color: #fff;
+            padding: 16px 78px;
+            margin-top: 5px;
+            height: 70px;
+
+        }
+
+        #topbar {
+            width: 100px;
+        }
+
+        .logo {
+            width: 130px;
+            font-size: 32px;
+            color: #0084ff;
+            margin: 0;
+            padding: 0px;
+            font-weight: 900;
+        }
+
+        .stories-heading {
+            margin: 0px;
+            width: 50px;
+            font-weight: 900;
+            font-family: 'Raleway' sans-serif;
+            font-style: italic;
+        }
+
+        .menu {
+            padding-left: 38px;
+            padding-top: 0px;
+        }
+
+        .fa-caret-down {
+            padding-left: 5px;
+            padding-top: 0px;
+        }
+
+        #Categories {
+            border-color: auto;
+
+        }
+
+
+
+        .top-section {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 16px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .trending-posts {
+            margin: 0;
+            font-weight: 600;
+            margin: 0px;
+        }
+
+        #filter-heading {
+            font-size: 14px;
+            font-weight: 900;
+            margin-left: 8px;
+        }
+
+
+        .Menu-container {
+            margin-left: 230px;
+            margin-bottom: 100%;
+
+        }
+
+        .filter-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .filter {
+            margin: 5px;
+            border: 1px solid #0084ff;
+            padding: 6px 14px;
+            border-radius: 10px;
+            color: #0084ff;
+            cursor: pointer;
+        }
+
+        #all {
+            color: #fff;
+            background-color: #0084ff;
+        }
+
+        .filter-image {
+            height: 16px;
+            width: 16px;
+            margin-top: 2px;
+        }
+
+
+        #article-section {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            flex-wrap: wrap;
+
+
+        }
+
+        .card-container {
+            width: calc(33.3% - 16px);
+            background-color: white;
+            padding-bottom: 30px;
+            border-radius: 5px;
+            box-shadow: 0 0 3px #0084ff;
+            margin: 8px;
+        }
+
+        .image-section {
+            height: 176px;
+            width: 100%;
+        }
+
+        .card-image {
+            height: 100%;
+            width: 100%;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+
+        .text-section {
+            padding-left: 24px;
+            padding-top: 10px;
+            padding-right: 24px;
+        }
+
+        .title {
+            font-size: 18px;
+            text-align: left;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .author-container {
+            padding-left: 24px;
+            padding-top: 4px;
+            display: flex;
+        }
+
+        .Author {
+            color: #0096ff;
+            font-size: 14px;
+            font-style: italic;
+            font-weight: 500;
+        }
+
+        .date {
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.7);
+            font-weight: 300;
+        }
+
+        .normal-text {
+            padding-left: 24px;
+            padding-right: 24px;
+        }
+
+        .text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.43;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 4px;
+        }
+
+        #footer {
+            height: 50px;
+            background-color: #172146;
+            width: 100%;
+            margin-top: 10px;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+
+        .footer-text {
+            color: white;
+            position: relative;
+            padding-top: 25px;
+            font-family: 'Times New Roman', Times, serif;
+            text-decoration: none;
+            text-shadow: 2px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header">
+        <div id="topbar">
+            <h2 class="logo"> EdYoda</h2>
+            <p class="stories-heading">Stories</p>
+        </div>
+        <div class="Menu-container">
+            <select name="Categories" id="Categories">
+                <option value="Explore Categories"> <b>Explore Categories</b></option>
+                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                <option value="Cloud Computing">Cloud Computing</option>
+                <option value="Dev Ops">Dev Ops</option>
+                <option value="Programming languages">Programming languages</option>
+                <option value="Mobile Application Development">Mobile Application Development</option>
+                <option value="Technology & Tools">Technology & Tools</option>
+                <option value="Get A Job in Tech Company">Get A Job in Tech Company</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+    </header>
+
+    <main id="main-section">
+        <div class="top-section">
+            <h2 class="trending-posts">Trending Posts</h2>
+            <div class="filter-section">
+                <p id="filter-heading"><i class="fas fa-filter"><img class="filter-image"
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/Filter.svg/1200px-Filter.svg.png"><span
+                            style="color:white;">..</span></i>Filter By Category</p>
+            </div>
+
+            <div class="filter-container">
+                <p class="filter" id="all">All</p>
+                <p class="filter">Artificial Intelligence</p>
+                <p class="filter">Cloud Computing</p>
+                <p class="filter">Dev Ops</p>
+                <p class="filter">Programming languages</p>
+                <p class="filter">Mobile Application Development</p>
+                <p class="filter">Technology & Tools</p>
+                <p class="filter">Get A Job in Tech Company</p>
+                <p class="filter">Others</p>
+            </div>
+        </div>
+
+        <article id="article-section">
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/learn_machine_learning_courses_online.png"
+                        alt="Machine Learning Online Course" class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">Introduction to Machine Learning Online Course</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Edyoda<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 11 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">We have had an insight into Artificial Intelligence. Well, one of its subfields is
+                        machine learning and this introduction will help you get a fair idea of what a machine learning
+                        online course holds. To begin...</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/6.png" alt="LAMP Stack Vs MEAN stack"
+                        class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">LAMP Stack Vs MEAN stack: Choosing the right platform</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Edyoda<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 10 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">In today’s dynamic world, rapid web application development with a smooth user
+                        interface that can adapt to specific features is the main business requirement. Many
+                        organizations around the world that...</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/4.png"
+                        alt="Cloud Computing in various industries" class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">Impact of Cloud Computing in various industries</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Edyoda<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 09 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">Cloud computing has been rapidly gaining pace in the world of information
+                        technology. It has been observed that over 90% of global ...</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/3.png"
+                        alt="Challenges of Machine Learning in Big Data" class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">Challenges of Machine Learning in Big Data</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Edyoda<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 08 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">Machine Learning is a subset of artificial intelligence which is an important part
+                        of computer science. The revolution of Big Data promises to transform the way we work, live and
+                        think..</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/5.png"
+                        alt="Breaking the Myths around Cybersecurity" class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">Breaking the Myths around Cybersecurity</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Edyoda<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 07 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">Cybersecurity plays an integral role in the process of good business models. But
+                        even cybersecurity programs built with good intentions can fall short in front of advanced cyber
+                        attacking programs. There are some...</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/7.png"
+                        alt="Importance of Data Backup and Recovery in the IT" class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">Importance of Data Backup and Recovery in the IT</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Edyoda<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 06 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">A business must always introspect the areas where they lack in order to bring about
+                        a positive change in the work environment. One of...</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/automation-testing-an-overview-2.png"
+                        alt="What is Web Scraping?" class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">What is Web Scraping?</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Zac Clancy<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 05 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">Some websites and platforms offer application programming interfaces (APIs) which we
+                        can use to access information in a structured way, but others...</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/what_is_isa_blog_1.png"
+                        alt="What is Income Share" class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">What is Income Share Agreement?</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Edyoda<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 04 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">The term Income Share Agreement has been around for a long time since 1955 to be
+                        precise. Surprised, eh? It was first introduced by...</p>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="image-section">
+                    <img src="https://edyoda.s3.amazonaws.com/media/blog-images/practical_machine_learning_1.png" alt=""
+                        class="card-image">
+                </div>
+                <div class="text-section">
+                    <h3 class="title">Practical Machine Learning with...</h3>
+                </div>
+                <div class="author-container">
+                    <h3 class="Author">Daniel Pyrathon<span style="color:white;">.</span></h3>
+                    <h3 class="date"> | 03 Sep 2022</h3>
+                </div>
+                <div class="normal-text">
+                    <p class="text">Machine learning is a field of artificial intelligence that uses statistical
+                        techniques to give computer systems the ability to “learn” (e.g., progressively improve...</p>
+                </div>
+            </div>
+        </article>
+    </main>
+    <footer id="footer">
+        <p class="footer-text">
+            Created by <span> <b style="color:red ;">@Kalpesh</b></span>
+        </p>
+    </footer>
+</body>
+
+</html>
